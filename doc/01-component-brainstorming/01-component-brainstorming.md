@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Cayden Laukhuf
+- **Dot Number**: Laukhuf.9
+- **Due Date**: 9/19 4:10
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,7 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
+
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +51,7 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
+
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +66,7 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
+
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +105,14 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+As far as my hobbies go, im a big gamer-- I currently play esports (Super smash bros ult) both freelance, as in tournaments both local and nationwide, along with collegiate competitions for Ohio State as a varsity player. Im also, by technicality, the best mario kart player on the entire ohio state campus (I won the lenovo tournament the esports arena hosted last year)
+I love watching tv, anime, movies, and listening to whatever music fits the mood.
+
+For my career, the "passion" goal is to go into game development but i fear the state of the field may not be in such a great spot outside of like indie dev... Really I just want a secure enough job to get stable income somewhere within computer science as ive alwyas loved it and had fun doing it.
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
+
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +120,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -132,7 +129,7 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
+
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,26 +197,38 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: CardDeck
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model the creation/modificaiton of deck of playing cards. The idea is that this is like the base component people would use to build like a "use" of cards off of.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - Void Add(String card) appends card to end of this
+    - Void Add(String card, int index); adds card to position index in deck
+    - String remove(String card) removes and returns card from this
+    - String remove(int index) removes and returns card at index.
+    - Boolean isEmpty() reports whether this is empty.
+    - String look(int index); Returns the card at index
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void shuffle() randomizes order of "cards" in this
+    - String drawOne(); returns and removes the top card of this
+    - String drawRand(); returns and removes a random card in this.
+    - CardDeck drawMany(int i) returns and removes first i cards in this.
+    - CardDeck viewTop(int i) returns first i cards in this
+    - int locationOf(String card) returns index of card in this.
+    - boolean contains(String card) reports whether given card is in this.
+    - void swap(int i, int j) swaps cards and index i and j.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes because the deck is fundamentally changing when things are added/removed from it.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, this component will most likely end up being built on a sequence.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I have no idea, probably not though.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, the shuffle method could be done by using remove(int index) with a random index and then using add to add it to a temp deck then transferring back to original, or the viewTop(int i) could be a loop using look(int index).
 
 - Component Design #2: <!-- TODO: give component a name then delete this comment -->
   - **Description**:
