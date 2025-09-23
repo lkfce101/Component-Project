@@ -205,6 +205,7 @@ will likely refine your design to make your implementation easier to use.
     - Void Add(String card, int index); adds card to position index in deck
     - String remove(String card) removes and returns card from this
     - String remove(int index) removes and returns card at index.
+    - int size(); returns size of this;
     - Boolean isEmpty() reports whether this is empty.
     - String look(int index); Returns the card at index
   - **Secondary Methods**:
@@ -230,47 +231,73 @@ will likely refine your design to make your implementation easier to use.
       Answer, explain, and give at least one example:
       - yes, the shuffle method could be done by using remove(int index) with a random index and then using add to add it to a temp deck then transferring back to original, or the viewTop(int i) could be a loop using look(int index).
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Music Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component models a music playlist with songs stored as strings. The component would allow for in depth modification of the playlist.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - void add(String song) appends song to end of this
+    - void add(String song, int index) places song at position index in this
+    - String remove(String song) returns and removes first occurence of song from this.
+    - String remove(int index) returns and removes song at position index
+    - String song(int index) returns, doesnt remove song at index
+    - int size() reports size of this
+    - Boolean isEmpty() reports whether playlist is empty or not
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void shuffle() shuffles order of songs in this
+    - String play() plays (removes and returns) next (top) song of this
+    - Playlist viewNext(int i) returns, doesnt remove next i songs in this
+    - Boolean contains(String song) reports whether song is in this
+    - int songLocation(String song) returns index of first occurence of song in this
+    - void repeatSong(String song, int times) places 'times' copies of song at front of this
+    - void clean() removes (if present) any duplicate occurences of a song in this
+    - void merge(Playlist playlist) appends 'playlist' to the end of this
+
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because the playlist is constantly being changed
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - probably, it will most likely utilize sequence
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - no
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, merge could be made by doing add(string song) for every song in 'playlist'
+
+- Component Design #3: Dice Roll Tracker
+  - **Description**:
+    - This component models the rolling of a die and tracks previous rolls. The purpose is to allow for dice rolling and then using the history of rolls to apply modifiers or check for special rolls.
+  - **Kernel Methods**:
+    - int roll(int size) returns an integer value from 1-size inclusive, returns it, and also adds it to history
+    - int rollBetween(int min, int max) returns an integer valye from min to max inclusive, returns, and adds to history
+    - int size() reports number of recorded rolls
+    - boolean isEmpty() reports whether any rolls have been done yet
+    - int getRoll(int index) returns the value of the roll at index in history
+  - **Secondary Methods**:
+    - int previous(int i) returns value of most recent i rolls in this
+    - Sequence<Integer>?? history() returns all recorded rolls in this
+    - boolean isCrit(int critValue) returns if previous roll in this was a crit
+    - int applyMult(double mult) applies multiplier to most recent roll in this, adjusts and returns that new value (note--rounds down to keep integer values);
+    - int averageRoll() returns integer average roll of all rolls in this
+    - int mostRolled() returns value of most common roll value in this
+    - int highestRoll() returns value of highest roll in this
+    - int lowestRoll() returns value of lowest roll in this
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - yes, the tracker changes size and the values in the tracker can change
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - probably, once again this may be built in a sequence
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - not likely unless i were to declare like a permanent critical probability that applies to every roll
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - yes, mostRolled could be implimented by using getRoll(index) for every roll in this and keeping track of which shows up the most often
 
 ## Post-Assignment
 
@@ -279,7 +306,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -318,7 +344,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -332,7 +357,7 @@ you have to submit any PDFs.
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
+
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -359,7 +384,7 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
+
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
