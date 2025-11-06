@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## 2025.11.06
+
+### Added
+- Implemented CardDeckSecondary abstract class giving secondary (and object) method definitions using only the kernel methods.
+- Added full implementations for
+  - `void shuffle()`
+  - `String drawOne()`
+  - `String drawRand()`
+  - `CardDeck drawCards(int i)`
+  - `CardDeck viewCards(int i)`
+  - `int locationOf(String card)`
+  - `boolean contains(String card)`
+  - `void swap(int i, int j)`
+  - `String toString()`
+  - `boolean equals(CardDeck c)`
+
+### Notes
+- The abstract class depends on the kernel implementation class that does not exist yet, which only causes a temporary issue in the equals method as it doesn't recognize CardDeck yet.
+
+
 ## 2025.10.23
 
 ### Added
@@ -28,7 +48,7 @@ the following form: YYYY.0M.0D.
   - `void swap(int i, int j)`
 
 ### Notes
-- Some methods have been renamed from previous iterations, drawMany became drawCards and viewTop became viewCards. Funcitonality did not change. 
+- Some methods have been renamed from previous iterations, drawMany became drawCards and viewTop became viewCards. Funcitonality did not change.
 
 
 
