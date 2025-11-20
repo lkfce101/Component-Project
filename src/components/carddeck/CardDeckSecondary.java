@@ -20,19 +20,23 @@ public abstract class CardDeckSecondary implements CardDeck {
     }
 
     @Override
-    public boolean equals(CardDeck c) {
-        boolean ans = false;
-        if (this.size() == c.size()) {
-            ans = true;
-            int i = 0;
-            while (i < this.size() && ans) {
-                if (!this.look(i).equals(c.look(i))) {
-                    ans = false;
-                }
-                i++;
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof CardDeck)) {
+            return false;
+        }
+        CardDeck other = (CardDeck) obj;
+        if (this.size() != other.size()) {
+            return false;
+        }
+        for (int i = 0; i < this.size(); i++) {
+            if (!this.look(i).equals(other.look(i))) {
+                return false;
             }
         }
-        return ans;
+        return true;
     }
 
     @Override

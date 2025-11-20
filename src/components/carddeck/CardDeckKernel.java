@@ -23,7 +23,7 @@ public interface CardDeckKernel extends Standard<CardDeck> {
      *            position at which to add the card
      * @requires 0 <= index <= |this|
      * @updates this
-     * @ensures this = #this[0, index], <card>,  #this[index, |#this|]
+     * @ensures this = #this[0, index], <card>, #this[index, |#this|]
      */
     void add(String card, int index);
 
@@ -34,9 +34,8 @@ public interface CardDeckKernel extends Standard<CardDeck> {
      *            index of card to remove
      * @requires 0 <= index < |this|
      * @updates this
-     * @ensures
-     *  remove = #this[index]  and
-     *  this = #this[0, index],  #this[index + 1, |#this|]
+     * @ensures remove = #this[index] and this = #this[0, index], #this[index +
+     *          1, |#this|]
      * @return the removed card
      */
     String remove(int index);
@@ -67,4 +66,7 @@ public interface CardDeckKernel extends Standard<CardDeck> {
      * @return the card at {@code index}
      */
     String look(int index);
+
+    @Override
+    boolean equals(Object obj);
 }

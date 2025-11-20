@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## 2025.11.20
+
+### Added
+
+- Designed kernel implementation for `CardDeck` component
+- Implemented all kernel and Standard methods (`add`, `add` with index, `remove`, `size`, `isEmpty`, `look`, `newInstance`, `clear`, `transferFrom`)
+- Added constructor and `createNewRep()` method for initializing the representation
+- (bonus) Edited CardDeck kernel and secondary to properly define and implement equals the correct way.
+
+### Notes
+
+- The representation chosen was a Sequence1L because it was the easiest aligned with carddeck allowing for easy implementation of the kernel methods.
+
+
 ## 2025.11.06
 
 ### Added
