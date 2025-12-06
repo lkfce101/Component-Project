@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## 2025.12.05
+
+### Added
+
+- Designed test suite for CardDeck component
+- Designed two different use cases for CardDeck component, one (CardDeckDemo) being a test demo that shows off the methods that can be performed on a carddeck and CardDeckGame being a guessing game built off of a carddeck.
+
+### Notes
+
+- Updated CardDeck1 to include the convention and correspondence parameters.
+- General tidyness and clean up on multiple files.
+
 ## 2025.11.20
 
 ### Added

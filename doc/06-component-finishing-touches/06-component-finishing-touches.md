@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Cayden Laukhuf
+- **Dot Number**: Laukhuf.9
+- **Due Date**: 12/10 4:10
 
 ## Assignment Overview
 
@@ -50,7 +50,6 @@ course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -141,7 +140,7 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
+
 
 ## Assignment Tasks
 
@@ -307,18 +306,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think I understand software development more for sure just in terms of knowledge and skills gained, this has helped me learn what creatign something of your own is like. I definetly don't think this is a be all end all, as this is really i see it as creating something that could be used in the software development, not the actual software development itself.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+Alot of my knowledge gaps weren't code realted but more about how the tools like how vscode works and how github works. I solved those gaps mostly through testing things out and seeing what worked and what didnt. A quick google also helped.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+Software development is something I still enjoy doing, this project was an enjoyable expierence. It definetly is a much smaller part scale of actual software development so I dont know how this enjoyment stacks up to the 'real world' but it was fun regardless and doesn't make me want to quit now.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +325,33 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+This is admittedly basic but I picked up better time management skills, this project took alot of time and effort and due to it being optional i went through great lengths to make sure it didnt interfere with my required classwork from my other classes. I picked up documentation skills, like how to write a changelog.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+Write techically correct documentation of code
+Manage tume efficiently on multi month long projects
+
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I don't think this affected my carrer trajectory positvely or negatively, it was just another necessary step on the track I want to take. I want to go into the game dev industry so making this felt like an adequate step to learning how to make something on my own.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+To continue my career trajectory I need to just work on more projects--learning common game dev tools or engines and making little projects in them to demonstate adequate skills. I don't know any mentors off the top of my head but I mean if I meet someone in industry or searching out others in the community who are aspiring for the same career path would be useful.
+
+This section wasn't something that was asked but I really want to talk about this--I think if I did this porject again or were to expand on it in the future i missed a big time opporutunity by not making this component have dynamic types. While techically yeah you can represent numbers as strings or have a separator in a string to have mulitple values in one string, by restricting this component to that it loses out on some of it's variability. I don't really know why I made it string only--maybe because I wanted it to be easier for me to create or because I wasn't considering use cases, but I genuinely believe this was a huge miss on my part and wanted to include it somewhere in a reflection statement. Im proud of what I accomplished but it's not without my wishes for change.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
+
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.

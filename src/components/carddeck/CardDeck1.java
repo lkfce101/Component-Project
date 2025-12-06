@@ -2,6 +2,12 @@ package components.carddeck;
 
 import components.sequence.Sequence1L;
 
+/**
+ * CardDeck1: Concrete implementation of CardDeck using a Sequence1L.
+ *
+ * @convention $this.rep != null. For all entries e in $this.rep, e is a string
+ * @correspondence this = $this.rep
+ */
 public class CardDeck1 extends CardDeckSecondary {
 
     /**
@@ -65,9 +71,9 @@ public class CardDeck1 extends CardDeckSecondary {
 
     @Override
     public void transferFrom(CardDeck c) {
-        CardDeck1 newValue = (CardDeck1) c;
-        this.rep = newValue.rep;
-        c.clear();
+        CardDeck1 local = (CardDeck1) c;
+        this.rep = local.rep;
+        local.createNewRep();
     }
 
 }

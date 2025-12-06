@@ -1,6 +1,5 @@
 package components.carddeck;
 
-
 public interface CardDeck extends CardDeckKernel {
 
     /**
@@ -16,9 +15,7 @@ public interface CardDeck extends CardDeckKernel {
      *
      * @requires |this| > 0
      * @updates this
-     * @ensures
-     *   drawOne = #this[0]  and
-     *   this = #this[1, |#this|]
+     * @ensures drawOne = #this[0] and this = #this[1, |#this|]
      * @return top card
      */
     String drawOne();
@@ -28,9 +25,7 @@ public interface CardDeck extends CardDeckKernel {
      *
      * @requires |this| > 0
      * @updates this
-     * @ensures
-     *   drawRand is in #this and
-     *   this = #this remove {drawRand}
+     * @ensures drawRand is in #this and this = #this remove {drawRand}
      * @return a random card
      */
     String drawRand();
@@ -42,9 +37,7 @@ public interface CardDeck extends CardDeckKernel {
      *            number of cards to draw
      * @requires 0 <= i <= |this|
      * @updates this
-     * @ensures
-     *   drawCards = #this[0, i] and
-     *   this = #this[i, |#this|]
+     * @ensures drawCards = #this[0, i] and this = #this[i, |#this|]
      * @return card deck containing the removed cards
      */
     CardDeck drawCards(int i);
@@ -65,9 +58,8 @@ public interface CardDeck extends CardDeckKernel {
      *
      * @param card
      *            card to locate
-     * @requires this.contains(card)
      * @ensures this = #this and int 0 <= locationOf <= |this - 1|
-     * @return index of {@code card}
+     * @return index of {@code card}, -1 if not found
      */
     int locationOf(String card);
 
@@ -90,9 +82,7 @@ public interface CardDeck extends CardDeckKernel {
      *            second index
      * @requires 0 <= (i, j) < |this|
      * @updates this
-     * @ensures
-     *   this[i] = #this[j]  and
-     *   this[j] = #this[i]
+     * @ensures this[i] = #this[j] and this[j] = #this[i]
      */
     void swap(int i, int j);
 }
